@@ -1,0 +1,71 @@
+
+
+.professors {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+.professorBlock {
+    margin: 10px;
+    width: 500px;
+}
+.professorBlock h3, .professorBlock h2 {
+    margin: 5px 0 5px 0;
+}
+.professorBlock img {
+    width: 160px;
+    height: 215px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+.contact {
+    font-size: 24px;
+    margin: 25px;
+}
+.contactsForm h1 {
+    color: #505050;
+}
+#submit {
+    height: 30px;
+    width: 220px;
+    border-radius: 25px;
+    border: 1px solid brown;
+    background-color: white;
+    transition: 0.5s;
+}
+#submit:hover {
+    background-color: brown;
+    border-color: white;
+    color: white;
+    transition: 0.5s;
+}
+.contactsForm input {
+    margin-bottom: 10px;
+    height: 42px;
+    width: 100%;
+    font-size: 14px;
+    padding-left: 10px;
+}
+.contactsForm textarea {
+    margin-bottom: 10px;
+    height: 106px;
+    width: 100%;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 10px;
+    resize: none;
+}
+.contactsForm {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+}
+.contactsForm form {
+    width: inherit;
+    width: 950px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+

@@ -1,0 +1,121 @@
+.footer {
+    width: calc(100vw - 17px);
+    height: 400px;
+    /* background-image: linear-gradient(to bottom, #ffffff, #f8d1fc, #ff97d2, #ff517f, #ff0000); */
+    /* background: linear-gradient(to top,#990000 10%, #FFF 90% ); */
+    background-color: brown;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.copyright {
+  color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.footerBlock {
+    padding-top: 50px;
+    height: 300px;
+    width: 1280px;
+    display: flex;
+}
+.footerBlock a:visited, .footerBlock a:link {
+    text-decoration: none;
+    color: white;
+}
+.footerBlock ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu";
+  }
+  .footerBlock li, .footerBlock h3 {
+    margin: 5px;
+    color: white;
+  }
+  .list {
+    width: 300px;
+  }
+  .links {
+    width: 500px;
+  }
+  .emblem {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .emblem button {
+    width: 100%;
+    border-radius: 25px;
+    background-color: brown;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+  }
+  .emblem button:hover {
+    transition: 0.5s;
+    background-color: white;
+    border: 1px solid brown;
+    color: brown;
+  }
+  .emblem img {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+  .social {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+  }
+  .contacts {
+    color: white;
+    width: 330px;
+  }
+  .contacts h2 {
+    margin: 5px 5px 0 5px;
+  }
+  .contacts p {
+    margin: 0 5px 5px 5px;
+  }
+a:hover {
+    color: red;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+a:unhover {
+    color: #505050;
+    transition: 0.5s;
+  }
+  .social a, .social img {
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 1365px) {
+    .list, .links, .contacts {
+      display: none;
+    }
+    .footerBlock {
+      justify-content: center;
+      width: auto;
+    }
+    .footer {
+      width: 100%;
+    }
+    .social {
+      width: 200px;
+      margin-top: 25px;
+    }
+    .social a, .social img {
+      width: 48px;
+      height: 48px;
+    }
+    .emblem button {
+      height: 30px;
+    }
+  }

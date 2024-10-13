@@ -1,0 +1,199 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+  background-color: white;
+}
+.headerBlock {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.headerBlock,
+nav,
+.navButton {
+  height: 100%;
+}
+.navBlock {
+  width: 830px;
+  display: flex;
+  justify-content: space-around;
+  transition: 0;
+}
+.headerLogo {
+  width: 370px;
+}
+.logo {
+  background-image: url("./logo.png");
+  width: 55px;
+  height: 60px;
+  transition: 1s;
+}
+.logo:hover {
+  filter: grayscale(100%);
+  transition: 1s;
+}
+.navButton {
+  width: auto;
+  height: 40%;
+  color: #505050;
+  font-family: "Ubuntu";
+  font-size: 20px;
+  line-height: 100px;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+}
+.navButton a:hover {
+  color: red;
+  cursor: pointer;
+}
+.navButton a {
+  text-decoration: none;
+  color: #505050;
+}
+.navButton ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.navList {
+  position: absolute;
+  top: 100px;
+  display: none;
+  justify-content: center;
+  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  opacity: 100%;
+}
+.navList hr {
+  margin: 15px 0 15px 0;
+}
+.navList ul {
+  width: 200px;
+  background-color: white;
+  line-height: normal;
+}
+.navList li {
+  margin: 5px;
+  font-size: 20px;
+}
+.mobileBlock,
+.mobileBlock img {
+  width: 45px;
+  height: 45px;
+  display: none;
+}
+#show {
+  left: 0%;
+}
+#hide {
+  left: 100%;
+}
+#mobileHR {
+  display: none;
+}
+.navSlide {
+  display: none;
+}
+.navScroll,
+.navScroll a,
+.navScroll p {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.navScroll p {
+  margin: 0 0 5px 5px;
+  line-height: 90px;
+}
+@media (max-width: 1365px) {
+  .headerLogo {
+    width: 100px;
+  }
+  .headerBlock {
+    justify-content: center;
+  }
+  .itemImage {
+    position: relative;
+  }
+  .item .text {
+    width: 320px !important;
+    top: 50px !important;
+    position: absolute;
+    left: 10px !important;
+  }
+}
+@media (max-width: 1000px) {
+  .headerLogo {
+    width: 1000px;
+  }
+  .mobileBlock {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  .navBlock,
+  .mobileBlock img {
+    display: flex;
+  }
+  .navBlock,
+  .headerLogo {
+    margin: 10px;
+  }
+  .headerBlock {
+    justify-content: space-between;
+    width: 400px;
+  }
+  .navBlock {
+    height: calc(100% - 100px);
+    overflow: scroll;
+    width: 100%;
+    background-color: white;
+    left: 0;
+    top: 100px;
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x:hidden;
+    transition: 0.5s ease-in-out;
+  }
+  .navButton a,
+  .navButton p,
+  .navButton {
+    line-height: 75px;
+    width: 100%;
+    height: 75px;
+    font-size: 25px;
+    text-align: center;
+    flex-direction: column;
+    height: auto;
+    box-shadow: none;
+  }
+  .navList ul {
+    width: 100%;
+  }
+  #mobileHR {
+    display: inline;
+    margin: 0;
+  }
+  .navSlide {
+    display: flex;
+  }
+  .navList {
+    position: static;
+    box-shadow: none;
+  }
+  .navScroll a,
+  .navScroll p {
+    width: auto;
+  }
+  
+}
