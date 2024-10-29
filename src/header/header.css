@@ -92,7 +92,7 @@ nav,
   left: 0%;
 }
 #hide {
-  left: 100%;
+  left: -100%;
 }
 #mobileHR {
   display: none;
@@ -112,6 +112,10 @@ nav,
   line-height: 90px;
 }
 @media (max-width: 1365px) {
+  nav {
+    justify-content: flex-start;
+    width: 100%;
+  }
   .headerLogo {
     width: 100px;
   }
@@ -122,15 +126,18 @@ nav,
     position: relative;
   }
   .item .text {
-    width: 320px !important;
     top: 50px !important;
     position: absolute;
     left: 10px !important;
   }
 }
 @media (max-width: 1000px) {
+  nav {
+    width: auto;
+    margin: 0 25px 0 25px;
+  }
   .headerLogo {
-    width: 1000px;
+    width: auto;
   }
   .mobileBlock {
     display: flex;
@@ -147,8 +154,8 @@ nav,
     margin: 10px;
   }
   .headerBlock {
-    justify-content: space-between;
-    width: 400px;
+    justify-content: flex-start;
+    width: 90%;
   }
   .navBlock {
     height: calc(100% - 100px);

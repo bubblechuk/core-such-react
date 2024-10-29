@@ -6,9 +6,9 @@ import Test from './test.jpg'
 export const MySlider = () => {
     const image = require("../background22.jpeg")
     const slides = [
-        { id: 1, title: "ФИТ БГТУ", content: "Выспишься в гробу!", image: "https://i.imgur.com/olIk0jP.jpeg" },
-        { id: 2, title: "Slide 2", content: "Content for slide 2", image: "https://i.imgur.com/olIk0jP.jpeg" },
-        { id: 3, title: "Slide 3", content: "Content for slide 3", image: "https://i.imgur.com/olIk0jP.jpeg" },
+        { id: 1, title: "ФИТ БГТУ", content: "За нами будущее!", image: "https://i.imgur.com/olIk0jP.jpeg" },
+        { id: 2, title: "Лучшие студенты", content: "Только у нас!", image: "https://neutrongroup.cachefly.net/fasttrak.mvc/content/v2/themes/tdbank/img/students.jpg" },
+        { id: 3, title: "Поступи в БГТУ", content: "Лучший выбор!", image: "https://i.imgur.com/olIk0jP.jpeg" },
         // добавьте больше слайдов по необходимости
       ];
       const settings = {

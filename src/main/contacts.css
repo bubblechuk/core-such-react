@@ -7,7 +7,7 @@
     flex-wrap: wrap;
 }
 .professorBlock {
-    margin: 10px;
+    margin: 20px;
     width: 500px;
 }
 .professorBlock h3, .professorBlock h2 {
@@ -17,27 +17,46 @@
     width: 160px;
     height: 215px;
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    margin-bottom: 10px;
 }
 .contact {
-    font-size: 24px;
-    margin: 25px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
-.contactsForm h1 {
-    color: #505050;
+.contactText {
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    color: white;
+    background-color: brown;
+    border-radius: 5px;
+    font-size: 24px;
+    padding: 25px;
+}
+.contactText a {
+    text-decoration: none;
+    color:antiquewhite
 }
 #submit {
-    height: 30px;
+    height: 50px;
     width: 220px;
     border-radius: 25px;
-    border: 1px solid brown;
-    background-color: white;
-    transition: 0.5s;
-}
-#submit:hover {
     background-color: brown;
     border-color: white;
     color: white;
+    border: 1px solid white;
     transition: 0.5s;
+    font-size: 18px;
+}
+#submit:hover {
+    cursor: pointer;
+    border: 1px solid brown;
+    background-color: white;
+    color:brown;
+    transition: 0.5s;
+}
+.contactsForm span {
+    margin-bottom: 10px;
+    color: red;
 }
 .contactsForm input {
     margin-bottom: 10px;
@@ -60,6 +79,7 @@
     justify-content: center;
     width: 100%;
     margin: 10px;
+    padding-bottom: 100px;
 }
 .contactsForm form {
     width: inherit;
@@ -69,3 +89,14 @@
     flex-direction: column;
 }
 
+@media (max-width: 1365px) {
+.professorBlock {
+    width: 100%;
+}
+.contactsForm textarea, .contactsForm input {
+    width: calc(100% - 40px);
+}
+form h1 {
+    text-align: center;
+}
+}

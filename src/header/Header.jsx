@@ -2,11 +2,15 @@ import logo from "./logo.png";
 import Burger from "./menu.png";
 import React, { useRef, useEffect, useState } from "react";
 import "./header.css";
+import { useDispatch } from "react-redux";
+import { pageChange } from "../slices/listsSlice";
+import { Link } from "react-router-dom";
 export const Header = () => {
   const [rotationAngle, setRotationAngle] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(window.innerWidth > 1000);
   const navButton = document.getElementsByClassName("navButton");
   const navList = document.getElementsByClassName("navList");
+  const dispatch = useDispatch();
   window.onresize = () => {
     func();
     document.getElementsByClassName("navBlock")[0].style.left = "100%";
@@ -32,7 +36,7 @@ export const Header = () => {
   const func = () => {
     window.onscroll = function () {};
     if (window.innerWidth > 1000) {
-      
+      dispatch(pageChange(6))
       setIsMenuOpen(true);
       for (let i = 0; i < navList.length; i++) {
         navButton[i + 1].onmouseover = () => {
@@ -43,6 +47,7 @@ export const Header = () => {
         };
       }
     } else {
+      dispatch(pageChange(3))
       setIsMenuOpen(false);
       for (let i = 0; i < navList.length; i++) {
         navButton[i + 1].onmouseleave = null;
@@ -71,13 +76,14 @@ export const Header = () => {
   return (
     <div className="header">
       <div className="headerBlock">
-        <div className="headerLogo">
+        <Link to="/"><div className="headerLogo">
           <div className="logo"></div>
         </div>
+        </Link>
         <nav>
           <div className="navBlock" id={isMenuOpen ? "show" : "hide"}>
             <div className="navButton">
-              <a href="/">Главная</a>
+              <Link to="/" onClick={rotate}>Главная</Link>
             </div>
             <hr id="mobileHR" />
             <div className="navButton">
@@ -89,7 +95,7 @@ export const Header = () => {
               </div>
               <div className="navList" style={{ opacity: 1 }}>
                 <ul>
-                  <li><a href="/contacts">Контакты</a></li>
+                  <li><Link to="/contacts" onClick={rotate}>Контакты</Link></li>
                   <hr />
                   <li>Фотогалерея</li>
                   <hr />

@@ -38,7 +38,8 @@
     height: 600px;
 }
 .item .text {
-    width: 720px;
+    padding: 0 20px 0 20px;
+    width: auto;
     height: 150px;
     position: absolute;
     top: 225px;
@@ -46,7 +47,7 @@
     display: flex;
     flex-direction: column;
     margin: 25px;
-    background-color: rgb(0,0,0,0.75);
+    background-color: rgb(165,42,42,0.9);
     border-radius: 25px 0 25px 0;
 }
 .item h3 {
@@ -101,7 +102,7 @@
     align-content: flex-start;
     justify-content: center;
     margin: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .newsBlock {
     position: relative;
@@ -153,6 +154,30 @@
     height: 208px;
     background-color: brown;
 }
+.pagination {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 25px;;
+}
+
+.pagination button.active {
+    background-color: brown;
+    color: white;
+}
+
+.pagination button:hover {
+    background-color: gray;
+}
+
 @media (max-width: 1365px) {
     .main {
         width: 100%;
