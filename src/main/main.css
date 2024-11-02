@@ -179,6 +179,9 @@
 }
 
 @media (max-width: 1365px) {
+    .item h3 {
+        font-size: 36px;
+    }
     .main {
         width: 100%;
     }

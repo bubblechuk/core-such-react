@@ -29,7 +29,7 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route path="/core-such-react" element={<Main />} />
             <Route path="/contacts" element={<Contacts />} />
           </Routes>
         </main>

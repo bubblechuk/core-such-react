@@ -13,7 +13,7 @@ export const Header = () => {
   const dispatch = useDispatch();
   window.onresize = () => {
     func();
-    document.getElementsByClassName("navBlock")[0].style.left = "100%";
+    document.getElementsByClassName("navBlock")[0].style.left = "-100%";
   };
   const rotate = () => {
     document.getElementsByClassName("navBlock")[0].style.left = "";
@@ -76,14 +76,14 @@ export const Header = () => {
   return (
     <div className="header">
       <div className="headerBlock">
-        <Link to="/"><div className="headerLogo">
+        <Link to="/core-such-react"><div className="headerLogo">
           <div className="logo"></div>
         </div>
         </Link>
         <nav>
           <div className="navBlock" id={isMenuOpen ? "show" : "hide"}>
             <div className="navButton">
-              <Link to="/" onClick={rotate}>Главная</Link>
+              <Link to="/core-such-react" onClick={rotate}>Главная</Link>
             </div>
             <hr id="mobileHR" />
             <div className="navButton">
